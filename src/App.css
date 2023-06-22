@@ -1,38 +1,117 @@
+:root {
+  --pinkBg: #ffd3da;
+  --blueBg: #aed6f1;
+  --pinkText: #9e0059;
+  --blueText: #006494;
+  --grey: #A4A5AE;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li{
+  list-style-type: none;
+}
+
+body {
+  color: #222;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
 .App {
-  text-align: center;
+  padding: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content{
+  padding: 24px;
+  border-radius: 8px;
+  border-top: 3px solid var(--pinkBg);
+  border-left: 3px solid var(--pinkBg);
+  border-right: 3px solid var(--blueBg);
+  border-bottom: 3px solid var(--blueBg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.names_list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 16px;
+}
+
+.names_item {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.names_item--f {
+  background-color: var(--pinkBg);
+  color: var(--pinkText);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.names_item--m {
+  background-color: var(--blueBg);
+  color: var(--blueText);
+}
+
+.search {
+  display: flex;
+  column-gap: 8px;
+  justify-content: center;
+  padding: 24px;
+}
+
+.textField {
+  outline: none;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  padding: 10px 16px;
+}
+
+.searchBtn {
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.searchBtn.active{
+  border-bottom: 2px solid var(--grey);
+}
+
+.searchBtn--f{
+  background-color: var(--pinkBg);
+  color: var(--pinkText);
+}
+
+.searchBtn--m{
+  background-color: var(--blueBg);
+  color: var(--blueText);
+}
+
+.favourites {
+  display: flex;
+  column-gap: 24px;
+  padding: 24px 0;
+  border-bottom: 2px solid var(--grey);
+  margin-bottom: 24px;
+}
+
+.favourites_title {
+  color: var(--grey);
+  font-size: 24px;
+}
+
+.favourites_list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
 }

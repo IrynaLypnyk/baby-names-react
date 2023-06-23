@@ -69,7 +69,7 @@ function App() {
                         handleFilterChange={handleFilterChange}/>
                 <Favourites data={filteredFavourites} deleteFromFavourite={deleteFromFavourites}/>
                 <div className="names_list">
-                    {namesShown.map((name) => <NamesItem item={name} handleClick={addToFavourites}/>)}
+                    {namesShown.map((name) => <NamesItem key={name.id} item={name} handleClick={addToFavourites}/>)}
                 </div>
             </div>
         </div>

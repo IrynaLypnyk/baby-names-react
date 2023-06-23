@@ -21,6 +21,7 @@ function Search(props) {
                 <div className="buttons">
                 {filterNames.map((filter) => (
                     <button type="button"
+                            key={filter}
                             className={`searchBtn searchBtn--${filter} ${activeFilter === filter ? "active" : null}`}
                             onClick={() => handleFilterChange(filter)}>{FILTER_ICONS[filter]}</button>
                 ))

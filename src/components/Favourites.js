@@ -7,7 +7,7 @@ function Favourites(props) {
         <div className="favourites">
             <span className="favourites_title">Favourites:{!data.length ? " Click some names below to add to your favourites..." : ""}</span>
             <span className="favourites_list">
-                {data.map((name) => <NamesItem item={name} handleClick={deleteFromFavourite}/>)}</span>
+                {data.map((name) => <NamesItem key={name.id} item={name} handleClick={deleteFromFavourite}/>)}</span>
         </div>
     );
 }

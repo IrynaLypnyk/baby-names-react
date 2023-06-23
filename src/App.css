@@ -83,6 +83,12 @@ body {
   cursor: pointer;
 }
 
+.searchBtn svg {
+  width: auto;
+  height: 24px;
+  fill: currentColor;
+}
+
 .searchBtn.active{
   border-bottom: 2px solid var(--grey);
 }
@@ -92,14 +98,22 @@ body {
   color: var(--pinkText);
 }
 
+.searchBtn--f.active{
+  border-bottom: 2px solid var(--pinkText);
+}
+
 .searchBtn--m{
   background-color: var(--blueBg);
   color: var(--blueText);
 }
 
+.searchBtn--m.active{
+  border-bottom: 2px solid var(--blueText);
+}
+
 .favourites {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   column-gap: 24px;
   padding: 24px 0;
   border-bottom: 2px solid var(--grey);
@@ -115,4 +129,5 @@ body {
   display: flex;
   flex-wrap: wrap;
   column-gap: 10px;
+  row-gap: 10px;
 }

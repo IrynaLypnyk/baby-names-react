@@ -30,12 +30,11 @@ function App() {
             setSearch("");
             setNamesShown(initialData);
         } else {
-            const filteredNames = namesShown.filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase()));
+            const namesWithoutFavourites = initialData.filter(((item) => (
+                    favourites.every((favItem) => favItem.id !== item.id)
+                )));
+            const filteredNames = namesWithoutFavourites.filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase()));
             setNamesShown(filteredNames);
-            if (!filteredNames.length) {
-                const searchInFavourites = favourites.filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase()));
-                setFilteredFavourites(searchInFavourites);
-            }
         }
     };
 
@@ -56,10 +55,10 @@ function App() {
         setActiveFilter(filterName);
         if (filterName === FILTER.ALL) {
             setNamesShown(initialData);
-            setFilteredFavourites(favourites);
+            //setFilteredFavourites(favourites);
         } else {
             setNamesShown(initialData.filter((name) => name.sex === filterName));
-            setFilteredFavourites(favourites.filter((name) => name.sex === filterName));
+            //setFilteredFavourites(favourites.filter((name) => name.sex === filterName));
         }
     };
 

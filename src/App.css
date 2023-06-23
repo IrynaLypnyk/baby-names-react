@@ -67,7 +67,7 @@ body {
   column-gap: 8px;
   row-gap: 8px;
   justify-content: center;
-  padding: 24px;
+  padding: 24px 0;
 }
 
 .textField {

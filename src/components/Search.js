@@ -18,12 +18,14 @@ function Search(props) {
             <div className="search">
                 <input type="text" placeholder="Search for a name..." className="textField" value={search}
                        onChange={handleInputChange}/>
+                <div className="buttons">
                 {filterNames.map((filter) => (
                     <button type="button"
                             className={`searchBtn searchBtn--${filter} ${activeFilter === filter ? "active" : null}`}
                             onClick={() => handleFilterChange(filter)}>{FILTER_ICONS[filter]}</button>
                 ))
                 }
+                </div>
             </div>
         </form>
     );

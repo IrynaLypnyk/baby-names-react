@@ -1,6 +1,6 @@
 import React from "react";
-import {ReactComponent as FemaleIcon} from '../icons/female.svg';
-import {ReactComponent as MaleIcon} from '../icons/male.svg';
+import { ReactComponent as FemaleIcon } from "../icons/female.svg";
+import { ReactComponent as MaleIcon } from "../icons/male.svg";
 import { FILTER } from "../App";
 
 function Search(props) {

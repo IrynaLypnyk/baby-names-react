@@ -30,8 +30,12 @@ function App() {
             setSearch("");
             setNamesShown(initialData);
         } else {
-            const filteredNames = initialData.filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase()));
+            const filteredNames = namesShown.filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase()));
             setNamesShown(filteredNames);
+            if (!filteredNames.length) {
+                const searchInFavourites = favourites.filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase()));
+                setFilteredFavourites(searchInFavourites);
+            }
         }
     };
 

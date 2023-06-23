@@ -99,6 +99,7 @@ body {
 
 .favourites {
   display: flex;
+  align-items: flex-end;
   column-gap: 24px;
   padding: 24px 0;
   border-bottom: 2px solid var(--grey);
